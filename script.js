@@ -407,7 +407,6 @@ function renderProjects(projectsList) {
             ${proj.tech.length > 4 ? `<span class="chip">+${proj.tech.length - 4} more</span>` : ''}
           </div>
          <div class="project-footer">
-         <div class="project-footer">
            ${proj.liveUrl ? `
              <a href="${proj.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-live-app" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
                <span>⚡ Live App ↗</span>
