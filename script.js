@@ -3,6 +3,15 @@
  * Complete data store strictly sourced from official resume & real dashboard screenshots
  */
 
+// Dashboard images imported directly so Vite always bundles them correctly,
+// regardless of the public/ folder or hosting configuration.
+import imgCricket from './assets/dashboards/icc-womens-cricket.png';
+import imgChurn from './assets/dashboards/customer-churn.png';
+import imgClv from './assets/dashboards/customer-lifetime-value.png';
+import imgRetail from './assets/dashboards/retail-sales.png';
+import imgHospital from './assets/dashboards/hospital-analysis.png';
+import imgEcommerce from './assets/dashboards/ecommerce-sales.png';
+
 // Full project data store (100% resume fidelity + Real Dashboard Images)
 const projectsData = [
   {
@@ -12,7 +21,7 @@ const projectsData = [
     featured: true,
     badge: "Power BI & DAX",
     badgeClass: "chip-cyan",
-    image: "assets/dashboards/icc-womens-cricket.png",
+    image: imgCricket,
     scope: "Multi-Tournament Analytics × Ball-by-Ball Data",
     tech: ["Power BI", "DAX", "Power Query", "Data Modeling", "KPI Scorecards"],
     description: "Designed a comprehensive analytics dashboard delivering match outcome trends, player performance radar, strike-rate vs economy comparisons, and phase-wise drill-downs across international tournaments.",
@@ -36,7 +45,7 @@ const projectsData = [
     featured: true,
     badge: "Python & Machine Learning",
     badgeClass: "chip-violet",
-    image: "assets/dashboards/customer-churn.png",
+    image: imgChurn,
     liveUrl: "https://customer-churn-risk-dashboard-mxrzikt58xwst3gukfktv7.streamlit.app/",
     scope: "7,043 customer records × 21 attributes",
     tech: ["Python", "Pandas", "Scikit-learn", "Machine Learning", "Streamlit"],
@@ -61,7 +70,7 @@ const projectsData = [
     featured: false,
     badge: "SQL & Excel",
     badgeClass: "chip-cyan",
-    image: "assets/dashboards/customer-lifetime-value.png",
+    image: imgClv,
     scope: "7,043 customer records × 21 attributes",
     tech: ["SQL", "MySQL", "Excel", "Pivot Tables", "KPI Dashboards"],
     description: "Built an end-to-end Excel dashboard analyzing customer lifetime value and churn behavior across 7,000+ customer records. Wrote SQL queries to identify high-risk customer segments through KPI analysis.",
@@ -84,7 +93,7 @@ const projectsData = [
     featured: false,
     badge: "Power BI",
     badgeClass: "chip-amber",
-    image: "assets/dashboards/retail-sales.png",
+    image: imgRetail,
     scope: "125M+ sales transactions × 10 columns",
     tech: ["Power BI", "DAX", "Data Modeling", "Big Data Analytics", "KPI Cards"],
     description: "Designed an interactive Power BI dashboard with dynamic filters and KPI cards to analyze sales trends and product performance at enterprise scale.",
@@ -107,7 +116,7 @@ const projectsData = [
     featured: false,
     badge: "Tableau & Excel",
     badgeClass: "chip-violet",
-    image: "assets/dashboards/hospital-analysis.png",
+    image: imgHospital,
     scope: "1,000 records × 10 attributes",
     tech: ["Tableau", "Excel", "Data Storytelling", "Healthcare KPIs", "Filters"],
     description: "Built an interactive Tableau dashboard analyzing patient admissions, disease distribution, and department performance using healthcare KPI cards and dynamic filters.",
@@ -130,7 +139,7 @@ const projectsData = [
     featured: false,
     badge: "SQL & Excel",
     badgeClass: "chip-cyan",
-    image: "assets/dashboards/ecommerce-sales.png",
+    image: imgEcommerce,
     scope: "9,994 records × 21 attributes",
     tech: ["SQL", "MySQL", "Excel", "Pivot Tables", "Revenue Analytics"],
     description: "Built a Pivot Table and chart-based dashboard for sales trends, customer behavior, and revenue analysis with custom KPI cards and automated business reports.",
