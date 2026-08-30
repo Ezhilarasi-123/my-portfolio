@@ -151,7 +151,6 @@ const projectsData = [
     title: "Student Performance Prediction",
     category: "python",
     featured: false,
-    colabUrl: "https://colab.research.google.com/drive/1ungrPGvlmnkWiU0td2SEbfJUwNBmmFq_?usp=sharing",
     badge: "Python & ML Regression",
     badgeClass: "chip-emerald",
     scope: "395 student records × 33 attributes",
