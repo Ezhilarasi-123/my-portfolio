@@ -408,20 +408,17 @@ function renderProjects(projectsList) {
             ${proj.tech.length > 4 ? `<span class="chip">+${proj.tech.length - 4} more</span>` : ''}
           </div>
          <div class="project-footer">
-         ${proj.liveUrl ? `
-          <a href="${proj.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-live-app" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
-            <span>⚡ Live App ↗</span>
-          </a>
-         ` : proj.colabUrl ? `
-          <a href="${proj.colabUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-live-app" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
-            <span>🔬 View Google Colab ↗</span>
-          </a>
-        ` : `
-          <span style="font-size: 0.76rem; color: var(--text-muted); font-family: var(--font-mono);">${proj.scope}</span>
-         `}
-          <button class="btn-detail-link" onclick="openProjectModal('${proj.id}')">
-            Deep Dive <span>→</span>
-          </button>
+         <div class="project-footer">
+           ${proj.liveUrl ? `
+             <a href="${proj.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-live-app" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
+               <span>⚡ Live App ↗</span>
+             </a>
+          ` : `
+           <span style="font-size: 0.76rem; color: var(--text-muted); font-family: var(--font-mono);">${proj.scope}</span>
+          `}
+           <button class="btn-detail-link" onclick="openProjectModal('${proj.id}')">
+             Deep Dive <span>→</span>
+           </button>
         </div>
         </div>
       </div>
