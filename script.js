@@ -151,6 +151,7 @@ const projectsData = [
     title: "Student Performance Prediction",
     category: "python",
     featured: false,
+    colabUrl: "https://colab.research.google.com/drive/1ungrPGvlmnkWiU0td2SEbfJUwNBmmFq_?usp=sharing",
     badge: "Python & ML Regression",
     badgeClass: "chip-emerald",
     scope: "395 student records × 33 attributes",
@@ -406,18 +407,22 @@ function renderProjects(projectsList) {
             ${proj.tech.slice(0, 4).map(t => `<span class="chip">${t}</span>`).join('')}
             ${proj.tech.length > 4 ? `<span class="chip">+${proj.tech.length - 4} more</span>` : ''}
           </div>
-          <div class="project-footer">
-            ${proj.liveUrl ? `
-              <a href="${proj.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-live-app" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
-                <span>⚡ Live App ↗</span>
-              </a>
-            ` : `
-              <span style="font-size: 0.76rem; color: var(--text-muted); font-family: var(--font-mono);">${proj.scope}</span>
-            `}
-            <button class="btn-detail-link" onclick="openProjectModal('${proj.id}')">
-              Deep Dive <span>→</span>
-            </button>
-          </div>
+         <div class="project-footer">
+         ${proj.liveUrl ? `
+          <a href="${proj.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-live-app" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
+            <span>⚡ Live App ↗</span>
+          </a>
+         ` : proj.colabUrl ? `
+          <a href="${proj.colabUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-live-app" style="padding: 0.4rem 0.85rem; font-size: 0.8rem;">
+            <span>🔬 View Google Colab ↗</span>
+          </a>
+        ` : `
+          <span style="font-size: 0.76rem; color: var(--text-muted); font-family: var(--font-mono);">${proj.scope}</span>
+         `}
+          <button class="btn-detail-link" onclick="openProjectModal('${proj.id}')">
+            Deep Dive <span>→</span>
+          </button>
+        </div>
         </div>
       </div>
     </article>
